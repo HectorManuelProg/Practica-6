@@ -1,4 +1,4 @@
-package net.iessochoa.hectormanuelgelardosabater.practica6.ui.dashboard
+package net.iessochoa.hectormanuelgelardosabater.practica6.ui.Favoritos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import net.iessochoa.hectormanuelgelardosabater.practica6.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
+class FavoritosFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
 
@@ -23,7 +23,7 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+            ViewModelProvider(this).get(FavoritosViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
