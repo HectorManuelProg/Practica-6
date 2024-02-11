@@ -15,15 +15,16 @@ class HomeViewModel (application: Application):
     AndroidViewModel(application) {
     val personajesLiveData:LiveData<MutableList<Personaje>>
     init {
-//iniciamos el repositorio
+        //iniciamos el repositorio
         Repository(application)
-//observaremos los cambios en la lista de personajes
+        //observaremos los cambios en la lista de personajes
         personajesLiveData=Repository.getLiveDataListaPersonajes()
-//carga la primera página de personajes
+        //carga la primera página de personajes
         getNextPersonajes()
     }
     //lanza en segundo plano la carga de nuevos personajes
     fun getNextPersonajes()=viewModelScope.launch(Dispatchers.IO) {
         Repository.getNextPersonajes()
     }
+
 }
