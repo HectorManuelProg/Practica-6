@@ -5,6 +5,6 @@ import com.google.gson.annotations.SerializedName
 data class RespuestaRickMorty(
     val info: Info,
     // Nombre original del Json
-    @SerializedName("Results")
+    @SerializedName("results")
     val listaPersonajes: List<Personaje>
 )

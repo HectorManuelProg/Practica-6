@@ -1,10 +1,11 @@
 package net.iessochoa.hectormanuelgelardosabater.practica6.network
 
 import net.iessochoa.hectormanuelgelardosabater.practica6.model.RespuestaRickMorty
-import okhttp3.Response
+//import okhttp3.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 import retrofit2.http.Url
+import retrofit2.Response
 
 interface RickMortyService {
 //Llamada con parámetros al endpoint "character"
